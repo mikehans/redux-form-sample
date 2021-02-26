@@ -12,12 +12,12 @@ interface UserFormProps{
     validationWarning: [{fieldName: string, validatorName: string}]
 }
 
-
+// These are a couple of maps defining what validators to apply to what fields.
 const validationEnforced = {
-    'firstNameField': 'required',
-    'lastNameField': 'alphaOnly'
+    'firstNameField': ['required'],
+    'lastNameField': ['alphaOnly']
 };
-const validationWarning = {'firstNameField': 'alphaOnly'};
+const validationWarning = {'firstNameField': ['alphaOnly']};
 
 
 export function UserForm(props: UserFormProps): JSX.Element {
