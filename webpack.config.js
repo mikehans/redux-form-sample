@@ -8,7 +8,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 // var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
     entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -16,6 +15,7 @@ module.exports = {
         publicPath: '/',
         library: 'MH'
     },
+    devtool: 'eval-source-map',
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json' ]
     },
